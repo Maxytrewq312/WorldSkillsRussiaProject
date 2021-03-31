@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F880CA89-D5B1-4FB2-A491-D2AAA9331309}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WorldSkillsRussiaProject</RootNamespace>
+    <AssemblyName>WorldSkillsRussiaProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Charity.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Connection.cs" />
+    <Compile Include="Country.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Event.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EventType.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Gender.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Marathon.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Marathon1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Marathon1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Position.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RaceKitOption.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Registration.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationEvent.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationStatus.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Role.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Runner.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sponsorship.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Staff.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Timesheet.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Volunteer.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Администратор\Добавление пользователя.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Администратор\Добавление пользователя.Designer.cs">
+      <DependentUpon>Добавление пользователя.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Администратор\Загрузка волонтеров.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Администратор\Загрузка волонтеров.Designer.cs">
+      <DependentUpon>Загрузка волонтеров.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Администратор\Меню Администратора.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Администратор\Меню Администратора.Designer.cs">
+      <DependentUpon>Меню Администратора.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Администратор\Редактирование пользователя.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Администратор\Редактирование пользователя.Designer.cs">
+      <DependentUpon>Редактирование пользователя.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Администратор\Управление волонтерами.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Администратор\Управление волонтерами.Designer.cs">
+      <DependentUpon>Управление волонтерами.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Бегун\TestingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Бегун\TestingForm.Designer.cs">
+      <DependentUpon>TestingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Бегун\ThankYouForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Бегун\ThankYouForm.Designer.cs">
+      <DependentUpon>ThankYouForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Бегун\Авторизация.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Бегун\Авторизация.Designer.cs">
+      <DependentUpon>Авторизация.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Бегун\Главное меню бегуна.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Бегун\Главное меню бегуна.Designer.cs">
+      <DependentUpon>Главное меню бегуна.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Бегун\Действия бегуна.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Бегун\Действия бегуна.Designer.cs">
+      <DependentUpon>Действия бегуна.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Бегун\Информация о спонсоре.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Бегун\Информация о спонсоре.Designer.cs">
+      <DependentUpon>Информация о спонсоре.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Бегун\Мои Результаты.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Бегун\Мои Результаты.Designer.cs">
+      <DependentUpon>Мои Результаты.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Бегун\Подтверждение.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Бегун\Подтверждение.Designer.cs">
+      <DependentUpon>Подтверждение.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Бегун\Регистрация бегуна.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Бегун\Регистрация бегуна.Designer.cs">
+      <DependentUpon>Регистрация бегуна.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Бегун\Регистрация на марафон.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Бегун\Регистрация на марафон.Designer.cs">
+      <DependentUpon>Регистрация на марафон.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Бегун\Редактирование профиля%28сертификация%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Бегун\Редактирование профиля%28сертификация%29.Designer.cs">
+      <DependentUpon>Редактирование профиля%28сертификация%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Бегун\Редактирование профиля.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Бегун\Редактирование профиля.Designer.cs">
+      <DependentUpon>Редактирование профиля.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Бегун\Спонсор бегуна.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Бегун\Спонсор бегуна.Designer.cs">
+      <DependentUpon>Спонсор бегуна.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Координатор\Меню Координатора.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Координатор\Меню Координатора.Designer.cs">
+      <DependentUpon>Меню Координатора.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Координатор\Редактирование бегуна.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Координатор\Редактирование бегуна.Designer.cs">
+      <DependentUpon>Редактирование бегуна.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Марафон\BMI Калькулятор.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Марафон\BMI Калькулятор.Designer.cs">
+      <DependentUpon>BMI Калькулятор.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Марафон\BMR Калькулятор.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Марафон\BMR Калькулятор.Designer.cs">
+      <DependentUpon>BMR Калькулятор.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Марафон\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Марафон\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Марафон\Благотворительные организации.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Марафон\Благотворительные организации.Designer.cs">
+      <DependentUpon>Благотворительные организации.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Марафон\Длительность марафона.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Марафон\Длительность марафона.Designer.cs">
+      <DependentUpon>Длительность марафона.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Марафон\Интерактивная карта.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Марафон\Интерактивная карта.Designer.cs">
+      <DependentUpon>Интерактивная карта.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Марафон\Контрольная точка.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Марафон\Контрольная точка.Designer.cs">
+      <DependentUpon>Контрольная точка.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Марафон\Меню марафона.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Марафон\Меню марафона.Designer.cs">
+      <DependentUpon>Меню марафона.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Марафон\О марафоне.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Марафон\О марафоне.Designer.cs">
+      <DependentUpon>О марафоне.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Администратор\Добавление пользователя.resx">
+      <DependentUpon>Добавление пользователя.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Администратор\Загрузка волонтеров.resx">
+      <DependentUpon>Загрузка волонтеров.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Администратор\Меню Администратора.resx">
+      <DependentUpon>Меню Администратора.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Администратор\Редактирование пользователя.resx">
+      <DependentUpon>Редактирование пользователя.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Администратор\Управление волонтерами.resx">
+      <DependentUpon>Управление волонтерами.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Бегун\TestingForm.resx">
+      <DependentUpon>TestingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Бегун\ThankYouForm.resx">
+      <DependentUpon>ThankYouForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Бегун\Авторизация.resx">
+      <DependentUpon>Авторизация.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Бегун\Главное меню бегуна.resx">
+      <DependentUpon>Главное меню бегуна.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Бегун\Действия бегуна.resx">
+      <DependentUpon>Действия бегуна.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Бегун\Информация о спонсоре.resx">
+      <DependentUpon>Информация о спонсоре.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Бегун\Мои Результаты.resx">
+      <DependentUpon>Мои Результаты.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Бегун\Подтверждение.resx">
+      <DependentUpon>Подтверждение.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Бегун\Регистрация бегуна.resx">
+      <DependentUpon>Регистрация бегуна.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Бегун\Регистрация на марафон.resx">
+      <DependentUpon>Регистрация на марафон.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Бегун\Редактирование профиля%28сертификация%29.resx">
+      <DependentUpon>Редактирование профиля%28сертификация%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Бегун\Редактирование профиля.resx">
+      <DependentUpon>Редактирование профиля.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Бегун\Спонсор бегуна.resx">
+      <DependentUpon>Спонсор бегуна.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Координатор\Меню Координатора.resx">
+      <DependentUpon>Меню Координатора.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Координатор\Редактирование бегуна.resx">
+      <DependentUpon>Редактирование бегуна.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Марафон\BMI Калькулятор.resx">
+      <DependentUpon>BMI Калькулятор.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Марафон\BMR Калькулятор.resx">
+      <DependentUpon>BMR Калькулятор.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Марафон\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Марафон\Благотворительные организации.resx">
+      <DependentUpon>Благотворительные организации.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Марафон\Длительность марафона.resx">
+      <DependentUpon>Длительность марафона.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Марафон\Интерактивная карта.resx">
+      <DependentUpon>Интерактивная карта.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Марафон\Контрольная точка.resx">
+      <DependentUpon>Контрольная точка.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Марафон\Меню марафона.resx">
+      <DependentUpon>Меню марафона.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Марафон\О марафоне.resx">
+      <DependentUpon>О марафоне.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Marathon1DataSet.xsc">
+      <DependentUpon>Marathon1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Marathon1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Marathon1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Marathon1DataSet.xss">
+      <DependentUpon>Marathon1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\12331.png" />
+    <Content Include="Бегун\Database1.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Бегун\Database1_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
