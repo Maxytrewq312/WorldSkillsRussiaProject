@@ -13,6 +13,7 @@ namespace WorldSkillsRussiaProject.Бегун
 {
     public partial class Спонсор_бегуна : Form
     {
+        DateTime dateOfStart = new DateTime(2021, 11, 24, 6, 0, 0);
         int sponsorstvo;
         string connection = @"Data Source=DESKTOP-TSPOI6V\SQLEXPRESS;Initial Catalog=Marathon1;Integrated Security=True";
 
@@ -209,7 +210,9 @@ namespace WorldSkillsRussiaProject.Бегун
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Close();
+            ActiveForm.Hide();
+            MainMenu mm = new MainMenu();
+            mm.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -303,6 +306,19 @@ namespace WorldSkillsRussiaProject.Бегун
                 return "Некорректный ввод года в сроке действия";
 
             return "ОК";
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            TimeSpan different = dateOfStart.Subtract(DateTime.Now);
+            labelTime.Text = $"{different.Days} дней {different.Hours} часов и {different.Minutes} минут до старта марафона!";
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ActiveForm.Hide();
+            MainMenu mm = new MainMenu();
+            mm.Show();
         }
     }
 }

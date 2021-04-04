@@ -12,6 +12,7 @@ namespace WorldSkillsRussiaProject.Бегун
 {
     public partial class Главное_меню_бегуна : Form
     {
+        DateTime dateOfStart = new DateTime(2021, 11, 24, 6, 0, 0);
         public string email;
         public Главное_меню_бегуна(string email)
         {
@@ -33,7 +34,15 @@ namespace WorldSkillsRussiaProject.Бегун
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Close();
+            ActiveForm.Hide();
+            MainMenu mm = new MainMenu();
+            mm.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            TimeSpan different = dateOfStart.Subtract(DateTime.Now);
+            labelTime.Text = $"{different.Days} дней {different.Hours} часов и {different.Minutes} минут до старта марафона!";
         }
     }
 }

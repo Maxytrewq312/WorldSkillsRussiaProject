@@ -71,6 +71,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1010, 386);
             this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.labelDesk);

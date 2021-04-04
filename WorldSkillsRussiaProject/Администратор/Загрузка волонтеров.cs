@@ -14,6 +14,8 @@ namespace WorldSkillsRussiaProject.Администратор
 {
     public partial class Загрузка_волонтеров : Form
     {
+        public string email;
+        DateTime dateOfStart = new DateTime(2021, 11, 24, 6, 0, 0);
         string connection = @"Data Source=DESKTOP-TSPOI6V\SQLEXPRESS;Initial Catalog=Marathon1;Integrated Security=True";
         SqlConnection connectionSql;
         SqlCommand command;
@@ -85,6 +87,26 @@ namespace WorldSkillsRussiaProject.Администратор
             {
                 connectionSql.Close();
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            TimeSpan different = dateOfStart.Subtract(DateTime.Now);
+            labelTime.Text = $"{different.Days} дней {different.Hours} часов и {different.Minutes} минут до старта марафона!";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ActiveForm.Hide();
+            MainMenu mm = new MainMenu();
+            mm.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ActiveForm.Hide();
+            Admin.Меню_Администратора mm = new Admin.Меню_Администратора(email);
+            mm.Show();
         }
     }
 }

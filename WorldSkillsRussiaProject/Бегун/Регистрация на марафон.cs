@@ -13,6 +13,7 @@ namespace WorldSkillsRussiaProject.Бегун
 {
     public partial class Регистрация_на_марафон : Form
     {
+        DateTime dateOfStart = new DateTime(2021, 11, 24, 6, 0, 0);
         public string email;
         int amount = 0;
         int amountKit = 0;
@@ -23,7 +24,6 @@ namespace WorldSkillsRussiaProject.Бегун
         SqlDataAdapter dataAdapter;
         SqlCommand command;
         DataTable table;
-        string imageLocation = "";
         public Регистрация_на_марафон(string email)
         {
             InitializeComponent();
@@ -62,8 +62,7 @@ namespace WorldSkillsRussiaProject.Бегун
                  command = new SqlCommand($"insert into RegistrationEvent (RegistrationId, EventId, BibNumber) values ((select RegistrationId from Registration where [RunnerId] = (select [RunnerId] from [Runner] where [Email] = '{Авторизация.email}')),'{eventSelect("FR")}',{random.Next(1727)})", connectionSql);
                  command.ExecuteNonQuery();
             }
-
-            Регистрация_на_марафон.ActiveForm.Hide();
+            ActiveForm.Hide();
             Бегун.ThankYouForm ty = new ThankYouForm();
             ty.Show();
             }
@@ -85,7 +84,7 @@ namespace WorldSkillsRussiaProject.Бегун
         {
             try
             {
-                dataAdapter = new SqlDataAdapter($"SELECT [EventId] FROM [MarathonSkills2016].[dbo].[Event] where EventTypeId = '{marathonType}'", connectionSql);
+                dataAdapter = new SqlDataAdapter($"SELECT [EventId] FROM [Marathon1].[dbo].[Event] where EventTypeId = '{marathonType}'", connectionSql);
                 DataSet dataSource = new DataSet();
 
                 dataAdapter.Fill(dataSource);
@@ -223,5 +222,17 @@ namespace WorldSkillsRussiaProject.Бегун
 
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            TimeSpan different = dateOfStart.Subtract(DateTime.Now);
+            labelTime.Text = $"{different.Days} дней {different.Hours} часов и {different.Minutes} минут до старта марафона!";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ActiveForm.Hide();
+            MainMenu mm = new MainMenu();
+            mm.Show();
+        }
     }
 }

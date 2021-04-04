@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -145,6 +145,12 @@
     <Compile Include="Volunteer.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Администратор\Добавление и редактирование.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Администратор\Добавление и редактирование.Designer.cs">
+      <DependentUpon>Добавление и редактирование.cs</DependentUpon>
+    </Compile>
     <Compile Include="Администратор\Добавление пользователя.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,11 +163,29 @@
     <Compile Include="Администратор\Загрузка волонтеров.Designer.cs">
       <DependentUpon>Загрузка волонтеров.cs</DependentUpon>
     </Compile>
+    <Compile Include="Администратор\Инвентарь.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Администратор\Инвентарь.Designer.cs">
+      <DependentUpon>Инвентарь.cs</DependentUpon>
+    </Compile>
     <Compile Include="Администратор\Меню Администратора.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Администратор\Меню Администратора.Designer.cs">
       <DependentUpon>Меню Администратора.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Администратор\Отчет.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Администратор\Отчет.Designer.cs">
+      <DependentUpon>Отчет.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Администратор\Поступление.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Администратор\Поступление.Designer.cs">
+      <DependentUpon>Поступление.cs</DependentUpon>
     </Compile>
     <Compile Include="Администратор\Редактирование пользователя.cs">
       <SubType>Form</SubType>
@@ -177,6 +201,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Администратор\Управление Благотворительными организациями.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Администратор\Управление Благотворительными организациями.Designer.cs">
+      <DependentUpon>Управление Благотворительными организациями.cs</DependentUpon>
+    </Compile>
     <Compile Include="Администратор\Управление волонтерами.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +224,12 @@
     </Compile>
     <Compile Include="Бегун\ThankYouForm.Designer.cs">
       <DependentUpon>ThankYouForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Бегун\UserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Бегун\UserControl2.Designer.cs">
+      <DependentUpon>UserControl2.cs</DependentUpon>
     </Compile>
     <Compile Include="Бегун\Авторизация.cs">
       <SubType>Form</SubType>
@@ -219,11 +255,23 @@
     <Compile Include="Бегун\Информация о спонсоре.Designer.cs">
       <DependentUpon>Информация о спонсоре.cs</DependentUpon>
     </Compile>
+    <Compile Include="Бегун\Контакты.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Бегун\Контакты.Designer.cs">
+      <DependentUpon>Контакты.cs</DependentUpon>
+    </Compile>
     <Compile Include="Бегун\Мои Результаты.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Бегун\Мои Результаты.Designer.cs">
       <DependentUpon>Мои Результаты.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Бегун\Мои спонсоры.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Бегун\Мои спонсоры.Designer.cs">
+      <DependentUpon>Мои спонсоры.cs</DependentUpon>
     </Compile>
     <Compile Include="Бегун\Подтверждение.cs">
       <SubType>Form</SubType>
@@ -327,14 +375,26 @@
     <Compile Include="Марафон\О марафоне.Designer.cs">
       <DependentUpon>О марафоне.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Администратор\Добавление и редактирование.resx">
+      <DependentUpon>Добавление и редактирование.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Администратор\Добавление пользователя.resx">
       <DependentUpon>Добавление пользователя.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Администратор\Загрузка волонтеров.resx">
       <DependentUpon>Загрузка волонтеров.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Администратор\Инвентарь.resx">
+      <DependentUpon>Инвентарь.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Администратор\Меню Администратора.resx">
       <DependentUpon>Меню Администратора.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Администратор\Отчет.resx">
+      <DependentUpon>Отчет.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Администратор\Поступление.resx">
+      <DependentUpon>Поступление.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Администратор\Редактирование пользователя.resx">
       <DependentUpon>Редактирование пользователя.cs</DependentUpon>
@@ -352,6 +412,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Администратор\Управление Благотворительными организациями.resx">
+      <DependentUpon>Управление Благотворительными организациями.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Администратор\Управление волонтерами.resx">
       <DependentUpon>Управление волонтерами.cs</DependentUpon>
     </EmbeddedResource>
@@ -360,6 +423,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Бегун\ThankYouForm.resx">
       <DependentUpon>ThankYouForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Бегун\UserControl2.resx">
+      <DependentUpon>UserControl2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Бегун\Авторизация.resx">
       <DependentUpon>Авторизация.cs</DependentUpon>
@@ -373,8 +439,14 @@
     <EmbeddedResource Include="Бегун\Информация о спонсоре.resx">
       <DependentUpon>Информация о спонсоре.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Бегун\Контакты.resx">
+      <DependentUpon>Контакты.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Бегун\Мои Результаты.resx">
       <DependentUpon>Мои Результаты.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Бегун\Мои спонсоры.resx">
+      <DependentUpon>Мои спонсоры.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Бегун\Подтверждение.resx">
       <DependentUpon>Подтверждение.cs</DependentUpon>
@@ -463,6 +535,13 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database1.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database1_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -474,13 +553,6 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <None Include="Resources\12331.png" />
-    <Content Include="Бегун\Database1.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Бегун\Database1_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Database1.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
